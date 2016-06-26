@@ -10,50 +10,118 @@
    <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <h1>TRAIN</h1>
-      <button type="button" class="btn btn-default navbar-btn navbar-right">Options</button>
-      <button type="button" class="btn btn-default navbar-btn navbar-right">Log In</button>
-      <button type="button" class="btn btn-default navbar-btn navbar-right">Register</button>
+      <button id="nav-options" type="button" class="btn btn-default navbar-btn navbar-right" data-dismiss="modal">Options</button>
+      <button id="nav-sign-in" type="button" class="btn btn-default navbar-btn navbar-right" data-dismiss="modal">Log In</button>
+      <button id="nav-sign-up" type="button" class="btn btn-default navbar-btn navbar-right" data-dismiss="modal">Register</button>
     </div>
     </ul>
    </nav>
 
+   <!-- Log In Modal -->
+   <div id="open-sign-in" class="modal fade" tabindex="-1" role="dialog">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title">Log In</h4>
+           </div>
+           <div class="modal-body">
+             <form id="sign-in">
+               <fieldset>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="submit" name="submit" value="Log In">
+               </fieldset>
+             </form>
+           </div>
+         </div><!-- /.modal-content -->
+       </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->
 
-     <article>
-       <form id="sign-up">
-         <fieldset>
-           <legend>Sign up!</legend>
-           <input type="text" name="credentials[email]" placeholder="Email">
-           <input type="password" name="credentials[password]" placeholder="Password">
-           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-           <input type="submit" name="submit" value="Sign up!">
-         </fieldset>
-       </form>
+     <!--  Register Modal-->
+     <div id="open-sign-up" class="modal fade" tabindex="-1" role="dialog">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+               <h4 class="modal-title">Register</h4>
+             </div>
+             <div class="modal-body">
+               <form id="sign-up">
+                 <fieldset>
+                   <input type="text" name="credentials[email]" placeholder="Email">
+                   <input type="password" name="credentials[password]" placeholder="Password">
+                   <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                   <input type="submit" name="submit" value="Submit">
+                 </fieldset>
+               </form>
+             </div>
+           </div><!-- /.modal-content -->
+         </div><!-- /.modal-dialog -->
+       </div><!-- /.modal -->
 
-       <form id="sign-in">
-         <fieldset>
-           <legend>Sign In!</legend>
-           <input type="text" name="credentials[email]" placeholder="Email">
-           <input type="password" name="credentials[password]" placeholder="Password">
-           <input type="submit" name="submit" value="Sign In">
-         </fieldset>
-       </form>
+       <!-- Options Modal -->
+       <div id="open-options" class="modal fade" tabindex="-1" role="dialog">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                 <h4 class="modal-title">Options</h4>
+               </div>
+               <div class="modal-body">
+                 <form id="sign-out">
+                   <fieldset>
+                     <input class="sign-out" type="submit" value="Log Out">
+                   </fieldset>
+                 </form>
+                 <form id="change-password">
+                   <fieldset>
+                     <input type="password" name="passwords[old]" placeholder="Current Password">
+                     <input type="password" name="passwords[new]" placeholder="New Password">
+                     <input type="submit" name="submit" value="Change Password">
+                   </fieldset>
+                 </form>
+               </div>
+             </div><!-- /.modal-content -->
+           </div><!-- /.modal-dialog -->
+         </div><!-- /.modal -->
 
-       <form id="sign-out">
-         <fieldset>
-           <legend>Sign Out!</legend>
-           <input class="sign-out" type="submit" value="Sign Out">
-         </fieldset>
-       </form>
+           <!-- <article>
+             <form id="sign-up">
+               <fieldset>
+                 <legend>Sign up!</legend>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                 <input type="submit" name="submit" value="Sign up!">
+               </fieldset>
+             </form>
 
-       <form id="change-password">
-         <fieldset>
-           <legend>Change Password!</legend>
-           <input type="password" name="passwords[old]" placeholder="Current Password">
-           <input type="password" name="passwords[new]" placeholder="New Password">
-           <input type="submit" name="submit" value="Change Password">
-         </fieldset>
-       </form>
-     </article>
+             <form id="sign-in">
+               <fieldset>
+                 <legend>Sign In!</legend>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="submit" name="submit" value="Sign In">
+               </fieldset>
+             </form>
+
+             <form id="sign-out">
+               <fieldset>
+                 <legend>Sign Out!</legend>
+                 <input class="sign-out" type="submit" value="Sign Out">
+               </fieldset>
+             </form>
+
+             <form id="change-password">
+               <fieldset>
+                 <legend>Change Password!</legend>
+                 <input type="password" name="passwords[old]" placeholder="Current Password">
+                 <input type="password" name="passwords[new]" placeholder="New Password">
+                 <input type="submit" name="submit" value="Change Password">
+               </fieldset>
+             </form>
+           </article> -->
    </div>
  </body>
 </html>
