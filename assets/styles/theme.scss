@@ -1,11 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $font-size;
+}
+
+nav.navbar {
+  background-color: #262522;
+}
+
+div.intro {
+  max-width: 600px;
+  margin: 75px $horizontal-margin 0;
+}
+
+div.train {
+  display: flex;
+  flex-direction: column;
+  height: $viewport-height;
+}
+
+
 form#sign-out {
   padding-bottom: $log-out-spacing;
 }
 
 h1 {
-  font-size: $font-size;
+  font-size: 2em;
   display: inline;
   position: $nav-title-position;
   top: -10px;
   letter-spacing: $letter-spacing;
+  color: #fff;
+}
+
+
+p {
+  font-size: 2em;
+}
+
+span {
+  color: #d4ff45;
+  text-transform: uppercase;
 }
