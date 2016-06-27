@@ -68,6 +68,17 @@ div.panel-group {
   transition: opacity 500ms ease-in-out;
 }
 
+div.btn-group-justified {
+  margin-left: -30px;
+  margin-top: 50px;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+section.column:hover div.btn-group-justified {
+  opacity: 1;
+}
+
 ul.weekly-workouts li {
   font-size: 1em;
   line-height: 2.5em;

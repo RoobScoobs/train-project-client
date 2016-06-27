@@ -93,6 +93,7 @@
              to get you ready to tackle a marathon
            </p>
          </div>
+
          <div class="train" >
            <section class="program column">
              <h2>The Program</h2>
@@ -114,7 +115,6 @@
                         training plan. You can modify the following sequence to suit
                         your week, but don’t do Speed & Endurance runs
                         back-to-back and stick to the recommended miles.
-                        <p>
                         <br>
                         Monday &#8227; Get the most out of today with a 3-7 mile
                         run that lets you recover as efficiently as possible.
@@ -188,8 +188,27 @@
            </section>
 
            <section class="runs column">
-             <h2>Runs<h2>
+             <h2 class="runs">Runs<h2>
+               <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                 <div class="btn-group" role="group">
+                   <button id="view-all-runs" type="button"class="btn btn-default" data-dismiss="modal">View Runs</button>
+                 </div>
+               </div>
            </section>
+
+           <div id="open-runs" class="modal fade" tabindex="-1" role="dialog">
+               <div class="modal-dialog">
+                 <div class="modal-content">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                     <h4 class="modal-title">Runs</h4>
+                   </div>
+                   <div class="modal-body display-runs">
+
+                   </div>
+                 </div><!-- /.modal-content -->
+               </div><!-- /.modal-dialog -->
+             </div><!-- /.modal -->
 
            <section class="pace-chart column">
              <h2>Pace Chart</h2>
