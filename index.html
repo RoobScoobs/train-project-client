@@ -187,47 +187,30 @@
             </ul> -->
            </section>
 
-           <!-- <section class="runs column">
+           <section class="runs column">
              <h2 class="runs">Runs<h2>
-               <form id="create-run">
                <div class="btn-group btn-group-justified" role="group" aria-label="...">
                  <div class="btn-group" role="group">
                    <button id="view-all-runs" type="button"class="btn btn-default" data-dismiss="modal">View Runs</button>
                  </div>
                </div>
-               <div class="form-group">
-                 <input type="text" class="form-control" id="run-description" placeholder="Describe Your Workout" aria-describedby="basic-addon1" name="run[description]">
-               </div>
-               <div class="form-group">
-                 <label>Distance Ran</label><br>
-                 <label><input class="form-control" id="total-miles" placeholder="Miles" type="number" name="run[total_miles]">
-               </div>
-               <div class="form-group">
-                 <label>Time Completed</label><br>
-                 <label><input class="form-control" id="total-time" placeholder="Completed In..." type="text" name="run[total_time]">
-               </div>
-               <div class="form-group">
-                 <label>Date Completed</label>
-                 <input class="form-control" id="date-completed" placeholder="Date Completed" type="date" name="run[completion_date]">
-               </div>
                <div class="btn-group btn-group-justified" role="group" aria-label="...">
                  <div class="btn-group" role="group">
-                   <button type="button"class="btn btn-default" data-dismiss="modal">Add A Run</button>
+                   <button id="form-to-create-run" type="button" class="btn btn-default" data-dismiss="modal">Add A Run</button>
                  </div>
                </div>
              </form>
-           </section> -->
+           </section>
 
-          <div class="input">
-           <form id="create-run">
+
+           <!-- <form id="create-run">
 
             <input type="text" class="form-control" id="run-description" placeholder="Describe Your Workout" aria-describedby="basic-addon1" name="run[description]">
             <input class="form-control" id="total-miles" placeholder="Miles" type="number" name="run[total_miles]">
             <input class="form-control" id="total-time" placeholder="Completed In..." type="text" name="run[total_time]">
             <input class="form-control" id="date-completed" placeholder="Date Completed" type="date" name="run[completion_date]">
-            <input class="btn btn-primary" type="submit" name="submit" value="submit">         
-          </form>
-        </div>
+            <input class="btn btn-primary" type="submit" name="submit" value="submit">
+          </form> -->
 
            <section class="pace-chart column">
              <h2>Pace Chart</h2>
@@ -261,25 +244,17 @@
                      <h4 class="modal-title">Add A Run</h4>
                    </div>
                    <div class="modal-body display-create-runs">
-                      <!-- <div class="form-group">
+                     <form id="create-run">
                         <input type="text" class="form-control" id="run-description" placeholder="Describe Your Workout" aria-describedby="basic-addon1" name="run[description]">
-                      </div>
-                      <div class="form-group">
                         <label>Distance Ran</label><br>
                         <label><input class="form-control" id="total-miles" placeholder="Miles" type="number" name="run[total_miles]">
-                      </div>
-                      <div class="form-group">
                         <label>Time Completed</label><br>
                         <label><input class="form-control" id="total-time" placeholder="Completed In..." type="text" name="run[total_time]">
-                      </div>
-                      <div class="form-group">
                         <label>Date Completed</label>
                         <input class="form-control" id="date-completed" placeholder="Date Completed" type="date" name="run[completion_date]">
-                      </div> -->
-                      <div class="modal-footer">
                         <a href="#" data-dismiss="modal" class="btn">Close</a>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
+                      </form>
                     </div>
                  </div><!-- /.modal-content -->
                </div><!-- /.modal-dialog -->

@@ -35,9 +35,9 @@ const runHandlers = () => {
   $('#view-all-runs').on('click', function () {
   $('#open-runs').modal('show');
   });
-  // $('#create-run').on('click', function () {
-  // $('#open-create-run').modal('show');
-  // });
+  $('#form-to-create-run').on('click', function () {
+  $('#open-create-run').modal('show');
+  });
   $('#create-run').on('submit', onCreateRuns);
 };
 
