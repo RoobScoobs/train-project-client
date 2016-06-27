@@ -1,34 +1,35 @@
 'use strict';
 
-const runApp = require('../app.js');
+const app = require('../app.js');
 
 
 const getRuns = function () {
   return $.ajax ({
-    url: runApp.host + '/runs/',
+    url: app.host + '/runs/',
     method: 'GET',
     headers: {
-      Authorization: 'Token token=' + runApp.user.token,
+      Authorization: 'Token token=' + app.user.token,
     },
   });
 };
 
-const createRuns = function () {
+const createRuns = function (data) {
   return $.ajax({
-    url: runApp.host + '/runs/',
+    url: app.host + '/runs/',
     method: "POST",
     headers: {
-      Authorization: 'Token token='+ runApp.user.token,
+      Authorization: 'Token token='+ app.user.token,
     },
+    data
   });
 };
 
 const updateRuns = function(description, total_miles, total_time, completion_date) {
   return $.ajax({
-    url: runApp.host + '/runs/' + runApp.runs.id,
+    url: app.host + '/runs/' + app.runs.id,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token='+ runApp.user.token,
+      Authorization: 'Token token='+ app.user.token,
     },
     data: {
       "runs": {
@@ -43,10 +44,10 @@ const updateRuns = function(description, total_miles, total_time, completion_dat
 
 const deleteRuns = function () {
   return $.ajax ({
-    url: runApp.host + '/runs/' + runApp.runs.id,
+    url: app.host + '/runs/' + app.runs.id,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token='+ runApp.user.token
+      Authorization: 'Token token='+ app.user.token
     }
   });
 };
