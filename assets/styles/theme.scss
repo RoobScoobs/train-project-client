@@ -7,7 +7,11 @@ body {
 }
 
 nav.navbar {
-  background-color: #262522;
+  background-color: $default-background;
+}
+
+form#sign-out {
+  padding-bottom: $log-out-spacing;
 }
 
 div.intro {
@@ -17,14 +21,56 @@ div.intro {
 
 div.train {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: $viewport-height;
 }
 
-
-form#sign-out {
-  padding-bottom: $log-out-spacing;
+section.column {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 5em;
+  flex-shrink: 1;
+  box-shadow: 0 0 30px $box-shadow;
+  overflow: hidden;
+  padding: 1em;
+  transition: flex-basis 500ms ease-in-out;
 }
+
+section.program {
+  background-color: $default-background;
+}
+
+section.runs {
+  background-color: $secondary-color;
+}
+
+section.pace-chart {
+  background-color: $default-background;
+}
+
+section.column:hover {
+  flex-basis: 20em;
+}
+
+section.column:hover ul.weekly-workouts {
+  opacity: 1;
+}
+
+ul.weekly-workouts {
+  margin-top: 100px;
+  margin-left: -150px;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+ul.weekly-workouts li {
+  font-size: 1em;
+  line-height: 2em;
+  color: $white;
+}
+
 
 h1 {
   font-size: 2em;
@@ -32,7 +78,11 @@ h1 {
   position: $nav-title-position;
   top: -10px;
   letter-spacing: $letter-spacing;
-  color: #fff;
+  color: $white;
+}
+
+h2 {
+  color: $white;
 }
 
 
@@ -41,6 +91,6 @@ p {
 }
 
 span {
-  color: #d4ff45;
+  color: $secondary-color;
   text-transform: uppercase;
 }
