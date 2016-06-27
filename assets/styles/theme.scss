@@ -6,6 +6,10 @@ body {
   font-size: $font-size;
 }
 
+body.container-fluid {
+  padding: 0;
+}
+
 nav.navbar {
   background-color: $default-background;
 }
@@ -22,7 +26,6 @@ div.intro {
 div.train {
   display: flex;
   flex-direction: row;
-  height: $viewport-height;
 }
 
 section.column {
@@ -52,11 +55,11 @@ section.column:hover {
   flex-basis: 20em;
 }
 
-section.column:hover ul.weekly-workouts {
+section.column:hover div.panel-group {
   opacity: 1;
 }
 
-ul.weekly-workouts {
+div.panel-group {
   margin-top: 100px;
   margin-left: -150px;
   padding: 0;
@@ -67,7 +70,7 @@ ul.weekly-workouts {
 
 ul.weekly-workouts li {
   font-size: 1em;
-  line-height: 2em;
+  line-height: 2.5em;
   color: $white;
 }
 
