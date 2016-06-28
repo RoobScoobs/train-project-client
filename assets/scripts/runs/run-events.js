@@ -21,13 +21,14 @@ const onCreateRuns = function (event) {
   .done(runsUi.createRunsSuccess)
   .fail(runsUi.failure);
 };
-// $('#addClimbModal').on('submit', function (event) {
-//       event.preventDefault();
-//       let data = getFormFields(event.target);
-//       //get data, prevents default
-//       authClimbApi.createClimb(authClimbUi.createClimbSuccess, authUi.failure, data);
-//   });
 
+const onDeleteRuns = function (event) {
+  event.preventDefault();
+  let id = $(this).data("id");
+  runsApi.deleteRuns(id)
+  .done(runsUi.deleteRunsSuccess)
+  .fail(runsUi.failure);
+};
 
 
 const runHandlers = () => {
@@ -39,6 +40,7 @@ const runHandlers = () => {
   $('#open-create-run').modal('show');
   });
   $('#create-run').on('submit', onCreateRuns);
+  $(document).on('click', '.close', onDeleteRuns);
 };
 
 

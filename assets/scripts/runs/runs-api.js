@@ -42,9 +42,9 @@ const updateRuns = function(description, total_miles, total_time, completion_dat
   });
 };
 
-const deleteRuns = function () {
+const deleteRuns = function (id) {
   return $.ajax ({
-    url: app.host + '/runs/' + app.runs.id,
+    url: app.host + '/runs/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token='+ app.user.token
