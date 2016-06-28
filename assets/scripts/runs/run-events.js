@@ -16,10 +16,14 @@ const onGetRuns = function (event) {
 const onCreateRuns = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
-  console.log(data);
   runsApi.createRuns(data)
   .done(runsUi.createRunsSuccess)
   .fail(runsUi.failure);
+};
+
+const onUpdateRuns = function (event) {
+  event.preventDefault();
+
 };
 
 const onDeleteRuns = function (event) {
@@ -34,12 +38,18 @@ const onDeleteRuns = function (event) {
 const runHandlers = () => {
   $('#view-all-runs').on('click', onGetRuns);
   $('#view-all-runs').on('click', function () {
-  $('#open-runs').modal('show');
-  });
+    $('#open-runs').modal('show');
+    });
   $('#form-to-create-run').on('click', function () {
-  $('#open-create-run').modal('show');
-  });
+    $('#open-create-run').modal('show');
+    });
   $('#create-run').on('submit', onCreateRuns);
+  $('#open-create-run').on('hidden.bs.modal', function () {
+    $('#create-run').find("input[type=text], input[type=number], input[type=date]").val('');
+    });
+  $('.close-modal').on ('click', function() {
+   $('#open-create-run').modal('hide');
+    });
   $(document).on('click', '.close', onDeleteRuns);
 };
 

@@ -4,7 +4,6 @@ const app = require('../app.js');
 const runsApi = require('./runs-api.js');
 
 const failure = function (error) {
-  console.error(error);
 };
 
 
@@ -22,7 +21,6 @@ const getRunsSuccess = function (data) {
 
 const createRunsSuccess = function (data) {
   app.run = data.run;
-  console.log(app.run);
 };
 
 const deleteRunsSuccess = function () {
