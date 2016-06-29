@@ -24,9 +24,10 @@ const createRuns = function (data) {
   });
 };
 
-const updateRuns = function(description, total_miles, total_time, completion_date) {
+const updateRuns = function(description, total_miles, total_time, completion_date, id) {
+  console.log(description, total_miles, total_time, completion_date, id);
   return $.ajax({
-    url: app.host + '/runs/' + app.runs.id,
+    url: app.host + '/runs/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token='+ app.user.token,
