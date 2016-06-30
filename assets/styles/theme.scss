@@ -85,6 +85,10 @@ ul.weekly-workouts li {
   color: $white;
 }
 
+button.runs {
+  background-color: $white;
+  border-color: $white;
+}
 
 h1 {
   font-size: 2em;
@@ -99,6 +103,9 @@ h2 {
   color: $white;
 }
 
+h2.runs {
+  color: $default-background;
+}
 
 p {
   font-size: 2em;

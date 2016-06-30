@@ -25,7 +25,7 @@ const getRunsSuccess = function (data) {
     "</td><td><button type='button' data-id='" + viewRuns[i].id + "'" +
     " class='close' aria-label='Close'><span class='x' aria-hidden='true'>&times;</span></button>" +
     "</td></tr>");
-  };
+  }
 };
 
 const createRunsSuccess = function (data) {
@@ -33,7 +33,9 @@ const createRunsSuccess = function (data) {
 };
 
 const runUpdateSuccess = function (data) {
-  console.log("Success" + data);
+  runsApi.getRuns()
+  .done(getRunsSuccess)
+  .fail(failure);
 };
 
 const deleteRunsSuccess = function () {

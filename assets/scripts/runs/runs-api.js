@@ -25,7 +25,6 @@ const createRuns = function (data) {
 };
 
 const updateRuns = function(description, total_miles, total_time, completion_date, id) {
-  console.log(description, total_miles, total_time, completion_date, id);
   return $.ajax({
     url: app.host + '/runs/' + id,
     method: 'PATCH',
@@ -33,7 +32,7 @@ const updateRuns = function(description, total_miles, total_time, completion_dat
       Authorization: 'Token token='+ app.user.token,
     },
     data: {
-      "runs": {
+      "run": {
         "description": description,
         "total_miles": total_miles,
         "total_time": total_time,

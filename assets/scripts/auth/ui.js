@@ -4,14 +4,14 @@ const app = require('../app.js');
 
 const success = (data) => {
   if (data) {
-    // console.log(data);
+    console.log(data);
   } else {
-    // console.log('Success');
+    console.log('Success');
   }
 };
 
 const failure = (error) => {
-  // console.error(error);
+  console.error(error);
 };
 
 const signInSuccess = (data) => {
@@ -20,7 +20,7 @@ const signInSuccess = (data) => {
 };
 
 const signOutSuccess = () => {
-  // console.log('User signed out successfully');
+  console.log('User signed out successfully');
   app.user = null;
 };
 
