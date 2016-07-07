@@ -33,7 +33,7 @@ const updateRuns = function(description, total_miles, total_time, completion_dat
       Authorization: 'Token token='+ app.user.token,
     },
     data: {
-      "runs": {
+      "run": {
         "description": description,
         "total_miles": total_miles,
         "total_time": total_time,
