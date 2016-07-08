@@ -26,6 +26,7 @@ div.intro {
 div.train {
   display: flex;
   flex-direction: row;
+  margin-top: 80px;
 }
 
 section.column {
@@ -37,6 +38,7 @@ section.column {
   overflow: hidden;
   padding: 1em;
   transition: flex-basis 500ms ease-in-out;
+  height: 100vh;
 }
 
 section.program {
@@ -55,18 +57,18 @@ section.column:hover {
   flex-basis: 20em;
 }
 
-section.column:hover div.panel-group {
+section.column:hover h4 {
   opacity: 1;
 }
 
-div.panel-group {
-  margin-top: 100px;
-  margin-left: -150px;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
-}
+// div.panel-group {
+//   margin-top: 100px;
+//   margin-left: -150px;
+//   padding: 0;
+//   list-style: none;
+//   opacity: 0;
+//   transition: opacity 500ms ease-in-out;
+// }
 
 div.btn-group-justified {
   margin-left: -30px;
@@ -85,9 +87,33 @@ ul.weekly-workouts li {
   color: $white;
 }
 
+<<<<<<< HEAD
 button.runs {
   background-color: $white;
   border-color: $white;
+=======
+button.helper {
+  background-color: $white;
+  color: $secondary-color;
+  border: none;
+}
+
+button.runs-btn {
+  background-color: $white;
+  border: none;
+}
+
+button.btn-primary {
+  background-color: $secondary-color;
+  color: $default-background;
+  border: none;
+}
+
+button.btn-primary:hover {
+  opacity: .7;
+  background-color: $secondary-color;
+  color: $default-background;
+>>>>>>> master
 }
 
 h1 {
@@ -99,16 +125,37 @@ h1 {
   color: $white;
 }
 
-h2 {
-  color: $white;
+h2.runs {
+  color: $default-background;
 }
 
+h2, h4 {
+  color: $white;
+  transition: opacity 500ms ease-in-out;
+}
+
+h4 {
+  margin-top: 130px;
+  margin-left: -150px;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+<<<<<<< HEAD
 h2.runs {
+=======
+h4.modal-title {
+  opacity: 1;
+>>>>>>> master
   color: $default-background;
 }
 
 p {
   font-size: 2em;
+}
+
+a {
+  color: $default-background;
 }
 
 span {

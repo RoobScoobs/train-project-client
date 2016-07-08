@@ -4,7 +4,7 @@ const app = require('../app.js');
 const runsApi = require('./runs-api.js');
 
 const failure = function (error) {
-  console.log("Failure" + error);
+  // console.log("Failure" + error);
 };
 
 
@@ -16,10 +16,10 @@ const getRunsSuccess = function (data) {
     "</td><td><input type='text' id='miles' disabled value='" + viewRuns[i]['total_miles'] + "'" +
     "</td><td><input type='text' id='time' disabled value='" + viewRuns[i]['total_time'] + "'" +
     "</td><td><input type='text' id='date' disabled value='" + viewRuns[i]['completion_date'] + "'" +
-    "</td><td><button type='button' class='update helper' data-id='" + viewRuns[i].id + "'" +
+    "</td><td><button type='button' class='edit helper' data-id='" + viewRuns[i].id + "'" +
     " class='edit' aria-label='Close'><span aria-hidden='true'>E</span></button>" +
     "</td>" +
-    "<td><button type='button' class='update patch' data-id='" + viewRuns[i].id + "'" +
+    "<td><button type='button' class='update helper' data-id='" + viewRuns[i].id + "'" +
     " class='edit' aria-label='Close'><span aria-hidden='true'>U</span></button>" +
     "</td>" +
     "</td><td><button type='button' data-id='" + viewRuns[i].id + "'" +
@@ -33,9 +33,13 @@ const createRunsSuccess = function (data) {
 };
 
 const runUpdateSuccess = function (data) {
+<<<<<<< HEAD
   runsApi.getRuns()
   .done(getRunsSuccess)
   .fail(failure);
+=======
+  // console.log("Success" + data);
+>>>>>>> master
 };
 
 const deleteRunsSuccess = function () {
