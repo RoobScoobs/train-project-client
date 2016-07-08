@@ -33,13 +33,10 @@ const createRunsSuccess = function (data) {
 };
 
 const runUpdateSuccess = function (data) {
-<<<<<<< HEAD
   runsApi.getRuns()
   .done(getRunsSuccess)
   .fail(failure);
-=======
   // console.log("Success" + data);
->>>>>>> master
 };
 
 const deleteRunsSuccess = function () {
